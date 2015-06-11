@@ -1,7 +1,7 @@
 {
-  "name": "kaavio",
+  "name": "kaavio-editor",
   "version": "2.3.10",
-  "description": "Diagram viewer and editor.",
+  "description": "Diagram editor plugin for kaavio.",
   "main": "./lib/index.js",
   "engines": {
     "node": ">= 0.10.0"
@@ -25,7 +25,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/wikipathways/kaavio.git"
+    "url": "https://github.com/wikipathways/kaavio-editor.git"
   },
   "keywords": [
     "network",
@@ -36,10 +36,9 @@
   "author": "WikiPathways team",
   "license": "Apache 2",
   "bugs": {
-    "url": "https://github.com/wikipathways/kaavio/issues"
+    "url": "https://github.com/wikipathways/kaavio-editor/issues"
   },
-  "homepage": "http://wikipathways.github.io/kaavio",
-  "gitHead": "044be6618ee72b932fcb90f4369eb61706f3cfb9",
+  "homepage": "http://wikipathways.github.io/kaavio-editor",
   "readmeFilename": "README.md",
   "style": [
     "./src/css/*.css",
@@ -82,6 +81,7 @@
   },
   "dependencies": {
     "JSONStream": "~0.10.0",
+    "kaavio": "git://github.com/wikipathways/kaavio.git#2.3.10",
     "bridgedb": "~4.1.0",
     "cross-platform-shapes": "git://github.com/ariutta/cross-platform-shapes.git#1.1.0",
     "cross-platform-text": "git://github.com/ariutta/cross-platform-text.git#0.0.14",

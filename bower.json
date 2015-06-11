@@ -1,18 +1,11 @@
 {
   "author": "WikiPathways team",
-  "name": "kaavio",
-  "description": "Diagram viewer and editor with Linked Open Data capabilities",
+  "name": "kaavio-editor",
+  "description": "Diagram editor plugin for kaavio.",
   "version": "2.3.10",
-  "homepage": "http://wikipathways.github.io/kaavio/",
-  "dependencies": {
-    "aight": "~1.2.2",
-    "d3": ">= 3.2.8",
-    "es5-shim": "~2.3.0",
-    "he": "~0.3.6",
-    "jquery": "1.x"
-  },
+  "homepage": "http://wikipathways.github.io/kaavio-editor/",
   "main": [
-    "./dist/kaavio-2.3.10.bundle.min.js"
+    "./dist/kaavio-editor-2.3.10.bundle.min.js"
   ],
   "defaultSave": true
 }
