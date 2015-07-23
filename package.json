@@ -87,6 +87,7 @@
     "insert-css": "~0.2.0",
     "jsonld-rx": "git://github.com/ariutta/jsonld-rx.git",
     "kaavio": "git://github.com/wikipathways/kaavio.git#2.3.10",
+    "levenshtein": "^1.0.5",
     "lodash": "^3.9.3",
     "mithril": "^0.2.0",
     "mithril-simple-modal": "git://github.com/ariutta/mithril-simple-modal.git",
