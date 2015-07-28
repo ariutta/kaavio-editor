@@ -98,6 +98,7 @@
     "simple-modal": "~0.1.4",
     "spectrum-colorpicker": "~1.6.1",
     "tower-strcase": "~0.5.0",
-    "typeahead.js": "~0.10.5"
+    "typeahead.js": "~0.10.5",
+    "uuid": "^2.0.1"
   }
 }
