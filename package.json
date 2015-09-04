@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "JSONStream": "^0.10.0",
-    "bridgedb": "~4.1.0",
+    "bridgedb": "^5.0.1",
     "highland": "~2.3.0",
     "iconv-lite": "~0.4.7",
     "insert-css": "~0.2.0",
