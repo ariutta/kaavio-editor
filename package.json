@@ -1,6 +1,6 @@
 {
   "name": "kaavio-editor",
-  "version": "2.3.10",
+  "version": "2.3.11",
   "description": "Diagram editor plugin for kaavio.",
   "main": "./lib/index.js",
   "engines": {
@@ -86,7 +86,7 @@
     "iconv-lite": "~0.4.7",
     "insert-css": "~0.2.0",
     "jsonld-rx": "git://github.com/ariutta/jsonld-rx.git",
-    "kaavio": "git://github.com/wikipathways/kaavio.git#2.3.10",
+    "kaavio": "git://github.com/wikipathways/kaavio.git#2.3.12",
     "levenshtein": "^1.0.5",
     "lodash": "^3.9.3",
     "mithril": "^0.2.0",
