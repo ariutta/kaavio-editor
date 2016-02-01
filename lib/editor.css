@@ -3,6 +3,7 @@
   position: absolute;
   z-index: 3; /* put .edit-trigger above diagram-container */
   bottom: 0px;
+  /* left: 0px; TODO may need to re-enable this once we use flexbox */
   display: inline-block;
   margin: 0 auto;
   cursor: pointer;
