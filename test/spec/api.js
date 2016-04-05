@@ -29,54 +29,43 @@ describe('Public API', function() {
     kaavioEditor = require('../../index.js') || window.kaavioEditor;
   });
 
-  it('init Kaavio', function() {
-    var containerElement = document.createElement('div');
-    var kaavioInstance = new Kaavio(containerElement, {
-      pvjson: {}
-    });
-    expect(kaavioInstance).to.be.instanceof(Kaavio);
-    expect(kaavioInstance).to.respondTo('init');
-  });
-
-  it('mount kaavioInstance only', function() {
-    var containerElement = document.createElement('div');
-    var kaavioInstance = new Kaavio(containerElement, {
-      pvjson: {}
-    });
-    m.mount(containerElement, kaavioInstance);
+  it('has save method', function() {
     expect(kaavioEditor).to.respondTo('save');
   });
 
-  it('init kaavioEditor', function() {
+  it('mount with kaavioEditor closed', function() {
     var containerElement = document.createElement('div');
-    expect(kaavioEditor).to.respondTo('save');
-  });
-
-  it('mount kaavioInstance with kaavioEditor closed', function() {
-    var containerElement = document.createElement('div');
+    document.body.appendChild(containerElement);
     var kaavioInstance = new Kaavio(containerElement, {
       pvjson: {}
     });
     kaavioInstance.footer = kaavioEditor;
     m.mount(containerElement, kaavioInstance);
-    console.log('div?');
-    console.log(document.querySelector('div'));
+
+    console.log('document.body.innerHTML');
     console.log(document.body.innerHTML);
-    expect(kaavioEditor).to.respondTo('save');
+
+    var kaavioElement = document.querySelector('.kaavio-container');
+    expect(kaavioElement.tagName).to.equal('DIV');
+    // TODO make sure the footer is closed
   });
 
   it('mount kaavioInstance with kaavioEditor open', function() {
     var containerElement = document.createElement('div');
+    document.body.appendChild(containerElement);
     var kaavioInstance = new Kaavio(containerElement, {
       pvjson: {},
       editor: 'open'
     });
     kaavioInstance.footer = kaavioEditor;
     m.mount(containerElement, kaavioInstance);
-    console.log('.diagram-container:');
-    console.log(document.querySelector('.diagram-container'));
+
+    console.log('document.body.innerHTML');
     console.log(document.body.innerHTML);
-    expect(kaavioEditor).to.respondTo('save');
+
+    var kaavioElement = document.querySelector('.kaavio-container');
+    expect(kaavioElement.tagName).to.equal('DIV');
+    // TODO make sure the footer is open
   });
 
 });
