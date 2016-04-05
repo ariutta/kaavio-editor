@@ -22,7 +22,9 @@
     "lib": "lib",
     "packages": "jspm_packages"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "mocha test/spec/api.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wikipathways/kaavio-editor.git"
@@ -46,16 +48,16 @@
   ],
   "dependencies": {
     "JSONStream": "^0.10.0",
-    "bridgedb": "git://github.com/ariutta/cross-platform-text.git#bd5df919c1be667a1b1ec9c633f0ce44397cdf9f",
+    "bridgedb": "git://github.com/bridgedb/bridgedbjs.git#3f53a3853b01c9ab0ffc4f367cb4dcfc4f266074",
     "highland": "~2.3.0",
     "iconv-lite": "~0.4.7",
     "insert-css": "~0.2.0",
     "jsonld-rx-extra": "git://github.com/ariutta/jsonld-rx-extra.git#a15d55059b6176db464c156c93513eed0f7d4663",
-    "kaavio": "git://github.com/wikipathways/kaavio.git#2.3.12",
+    "kaavio": "git://github.com/wikipathways/kaavio.git#53e78570f4bdb1945161f30773ee04a6667e9ca7",
     "levenshtein": "^1.0.5",
-    "lodash": "^3.9.3",
+    "lodash": "^3.10.1",
     "mithril": "^0.2.0",
-    "mithril-simple-modal": "git://github.com/ariutta/mithril-simple-modal.git",
+    "mithril-simple-modal": "git://github.com/ariutta/mithril-simple-modal.git#fe2643212cab2c40af5080d57bcd47dc4ce7f5d8",
     "promisescript": "~1.1.0",
     "rx": "^2.5.2",
     "rx-node": "^1.0.0",
@@ -69,7 +71,7 @@
   "devDependencies": {
     "bdd-with-opts": "0.0.4",
     "brfs": "^1.4.0",
-    "chai": "~2.1.2",
+    "chai": "^2.1.2",
     "chai-as-promised": "latest",
     "connect": "~2.14.3",
     "deglobalify": "^0.2.0",
@@ -83,10 +85,13 @@
     "gulp-sequence": "~0.3.1",
     "highland": "~2.3.0",
     "inquirer": "~0.8.0",
+    "jsdom": "^8.3.0",
+    "loggin": "^3.0.1",
     "matchdep": "~0.1.2",
     "minimize": "~0.7.6",
     "mkdirp": "^0.5.1",
-    "mocha": "~1.18.2",
+    "mocha": "^1.18.2",
+    "mocha-jsdom": "^1.1.0",
     "mockserver": "~1.1.0",
     "node-notifier": "~4.0.3",
     "pretty-data": "~0.40.0",
@@ -96,6 +101,7 @@
     "reload": "~0.1.0",
     "selenium-launcher": "git://github.com/ariutta/nodejs-selenium-launcher",
     "selenium-standalone": "~2.44.0-7",
+    "sinon": "^1.17.3",
     "spawn-mocha-parallel": "~1.0.0",
     "wd": "~0.3.11",
     "workflow-bob": "git://github.com/ariutta/workflow-bob.git",
