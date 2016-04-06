@@ -7,6 +7,7 @@ var jsdom = require('mocha-jsdom')
 var expect = require('chai').expect;
 var sinon = require('sinon');
 var sologger = require('../sologger.js');
+var pvjson = require('../inputs/WP1_73346.json');
 
 //process.env.NODE_ENV = 'development';
 
@@ -33,11 +34,47 @@ describe('Public API', function() {
     expect(kaavioEditor).to.respondTo('save');
   });
 
-  it('mount with kaavioEditor closed', function() {
+  it('mount with kaavioEditor unspecified', function() {
     var containerElement = document.createElement('div');
     document.body.appendChild(containerElement);
     var kaavioInstance = new Kaavio(containerElement, {
-      pvjson: {}
+      pvjson: pvjson
+    });
+    kaavioInstance.footer = kaavioEditor;
+    m.mount(containerElement, kaavioInstance);
+
+    console.log('document.body.innerHTML');
+    console.log(document.body.innerHTML);
+
+    var kaavioElement = document.querySelector('.kaavio-container');
+    expect(kaavioElement.tagName).to.equal('DIV');
+    // TODO make sure the footer is closed
+  });
+
+  it('mount kaavioInstance with kaavioEditor disabled', function() {
+    var containerElement = document.createElement('div');
+    document.body.appendChild(containerElement);
+    var kaavioInstance = new Kaavio(containerElement, {
+      pvjson: pvjson,
+      editor: 'disabled'
+    });
+    kaavioInstance.footer = kaavioEditor;
+    m.mount(containerElement, kaavioInstance);
+
+    console.log('document.body.innerHTML');
+    console.log(document.body.innerHTML);
+
+    var kaavioElement = document.querySelector('.kaavio-container');
+    expect(kaavioElement.tagName).to.equal('DIV');
+    // TODO make sure the footer is disabled
+  });
+
+  it('mount kaavioInstance with kaavioEditor closed', function() {
+    var containerElement = document.createElement('div');
+    document.body.appendChild(containerElement);
+    var kaavioInstance = new Kaavio(containerElement, {
+      pvjson: pvjson,
+      editor: 'closed'
     });
     kaavioInstance.footer = kaavioEditor;
     m.mount(containerElement, kaavioInstance);
@@ -54,7 +91,7 @@ describe('Public API', function() {
     var containerElement = document.createElement('div');
     document.body.appendChild(containerElement);
     var kaavioInstance = new Kaavio(containerElement, {
-      pvjson: {},
+      pvjson: pvjson,
       editor: 'open'
     });
     kaavioInstance.footer = kaavioEditor;
