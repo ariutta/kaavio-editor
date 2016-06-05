@@ -48,7 +48,7 @@
   ],
   "dependencies": {
     "JSONStream": "^0.10.0",
-    "bridgedb": "git://github.com/bridgedb/bridgedbjs.git#c5460ea9f2b0f394baaec7dc737d557ca027e53a",
+    "bridgedb": "git://github.com/bridgedb/bridgedbjs.git#723bcb827b4022fdec62ee90c03dc899aa351523",
     "highland": "~2.3.0",
     "iconv-lite": "~0.4.7",
     "insert-css": "~0.2.0",
